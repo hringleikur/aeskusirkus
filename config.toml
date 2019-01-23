@@ -1,3 +1,34 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "/"
+defaultContentLanguage = "is"
+config = "config.toml"
+
+[params]
+    google_analytics_id=""
+
+[languages]
+
+  [languages.is]
+    title = "Aeskusirkus"
+    contentDir = "content/is"
+    languageName = "íslensk"
+    languageCode = "is"
+    weight = 1
+    [[languages.is.menu.main]]
+    	name = "Services"
+    	url = "/services/"
+        weight = 1
+
+    [[languages.is.menu.main]]
+        name = "Team"
+        url = "/team/"
+        weight = 2
+
+    [[languages.is.menu.main]]
+    	name = "Testimonials"
+    	url = "/testimonials/"
+    	weight = 3
+
+    [[languages.is.menu.main]]
+        name = "Contact"
+        url = "/contact/"
+        weight = 4

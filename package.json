@@ -1,0 +1,18 @@
+{
+  "name": "aeskusirkus.is",
+  "version": "1.0.0",
+  "description": "Translation management and deployment tools for hugo website",
+  "main": "build.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-hringleikur:hringleikur/aeskusirkus.git"
+  },
+  "author": "Thomas Burke",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "simple-git": "^1.107.0"
+  }
+}
