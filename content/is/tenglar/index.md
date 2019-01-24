@@ -6,3 +6,4 @@ title : "Tenglar"
 weight : 2
 translationKey: "tenglar"
 ---
+Islensk!
