@@ -1,0 +1,47 @@
+baseURL: "/"
+defaultContentLanguage: "is"
+
+params:
+  google_analytics_id=""
+
+languages:
+  is:
+    title: "Æskusirkus"
+    contentDir: "content/is"
+    languageName: "íslensk"
+    languageCode: "is"
+    weight: 1
+    menu:
+      main:
+      - name: "Services"
+        url: "/services/"
+        weight: 1
+      - name: "Team"
+        url: "/team/"
+        weight: 2
+      - name: "Testimonials"
+        url: "/testimonials/"
+        weight: 3
+      - name: "Contact"
+        url: "/contact/"
+        weight: 4
+  en:
+    title: "Aeskusirkus"
+    contentDir: "content/en"
+    languageName: "English"
+    languageCode: "en-us"
+    weight: 2
+    menu:
+      main:
+      - name: "Services"
+        url: "/services/"
+        weight: 1
+      - name: "Team"
+        url: "/team/"
+        weight: 2
+      - name: "Testimonials"
+        url: "/testimonials/"
+        weight: 3
+      - name: "Contact"
+        url: "/contact/"
+        weight: 4

@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: git-gateway
+  branch: master
 publish_mode: editorial_workflow
 media_folder: "static/img/uploaded"
 public_folder: "/img/uploaded"
@@ -12,45 +13,26 @@ accept_roles:
     - admin
     - editor
 collections:
-  - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
-    folder: "_posts"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mma"}
-      - {label: "Cover Image", name: "image", widget: "image", required: false, tagname: ""}
-      - {label: "Body", name: "body", widget: "markdown"}
-    meta:
-      - {label: "SEO Description", name: "description", widget: "text"}
-  - label: "Icelandic Pages"
-    name: "is-pages"
+  - name: "pages"
+    label: "Pages"
+    delete: false
+    extension: "yml"
+    format: "yml"
     files:
       - label: "Um okkur"
         name: "umokkur"
-        file: "content/is/about.md"
+        file: "content/cms/about.yml"
+        translations:
+          en:
+            file: "content/en/about.md"
+          is:
+            file: "content/is/umokkur.md"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Hafa samband"
-        name: "hafasamband"
-        file: "content/is/contact.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-  - label: "English Pages"
-    name: "en-pages"
-    files:
-      - label: "About"
-        name: "about"
-        file: "content/en/about.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Contact"
-        name: "contact"
-        file: "content/en/contact.md"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mma", required: true}
+          - {label: "Title (Icelandic)", name: title_is, widget: string, required: true}
+          - {label: "Title (English)", name: title_en, widget: string, required: false}
+          - {label: "Cover Image", name: "image", widget: "image", required: false}
+          - {label: "Caption (Icelandic)", name: caption_is, widget: string, required: false}
+          - {label: "Caption (English)", name: caption_en, widget: string, required: false}
+          - {label: "Body (Icelandic)", name: "body_is", widget: "markdown", required: true}
+          - {label: "Body (English)", name: "body_en", widget: "markdown", required: false}
