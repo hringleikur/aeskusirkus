@@ -2,9 +2,10 @@
   "name": "aeskusirkus.is",
   "version": "1.0.0",
   "description": "Translation management and deployment tools for hugo website",
-  "main": "build.js",
   "scripts": {
-    "test": "test.js"
+    "test": "test.js",
+    "prebuild":"node ./build.js",
+    "build":"hugo"
   },
   "repository": {
     "type": "git",
@@ -14,6 +15,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "js-yaml": "^3.12.1",
+    "mkdirp": "^0.5.1",
     "simple-git": "^1.107.0"
   }
 }

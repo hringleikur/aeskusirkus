@@ -1,5 +1,10 @@
 baseURL: "/"
 defaultContentLanguage: "is"
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+  - RSS
+  - sitemap
 
 params:
   google_analytics_id=""

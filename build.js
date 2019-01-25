@@ -1,5 +1,7 @@
 const yaml = require('js-yaml');
 const fs   = require('fs');
+const path = require('path');
+const mkdirp = require('mkdirp');
 const git = require('simple-git/promise')('../working');
 
 const CONFIG = "./static/admin/config.yml"
@@ -52,7 +54,6 @@ git
 
   function checkFiles(list)
   {
-    console.log(list);
     var allFiles = list.split("\n");
     var contentFiles = allFiles
         .filter(file=>file.startsWith(CONTENT_DIR) && file.endsWith(CONTENT_SUFFIX))
@@ -69,6 +70,10 @@ git
     try
     {
       var content = yaml.safeLoad(fs.readFileSync(file, 'utf8'));
+      if(!content)
+      {
+        throw new Error("Fine empty or not found");
+      }
       handler.languages.forEach(lang=>{
         var frontmatter = {};
         var body = "";
@@ -95,19 +100,25 @@ git
               value = content[field.name];
             }
           }
-          if(key == 'body')
+          if(value)
           {
-            body = value;
-          }
-          else
-          {
-            frontmatter[key] = value;
+            if(key == 'body')
+            {
+              body = value;
+            }
+            else
+            {
+              frontmatter[key] = value;
+            }
           }
         });
         frontmatter.translationKey = file
           .replace(CONTENT_DIR, '')
           .replace(CONTENT_SUFFIX, '');
-        var outputFile = lang.file ? lang.file : CONTENT_DIR + frontmatter.translationKey + CONTENT_SUFFIX;
+
+        var outputFile = lang.file ? lang.file : lang.folder + frontmatter.translationKey + CONTENT_SUFFIX;
+        mkdirp.sync(lang.file ? path.dirname(lang.file) : lang.folder);
+
         var stream = fs.createWriteStream(outputFile);
         stream.once('open', function(fd) {
           stream.write("---\n");
@@ -120,6 +131,6 @@ git
     }
     catch(e)
     {
-      console.log(e);
+      console.log("Aborting file: ", e);
     }
   }
