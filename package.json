@@ -13,6 +13,7 @@
   "author": "Thomas Burke",
   "license": "UNLICENSED",
   "dependencies": {
+    "js-yaml": "^3.12.1",
     "simple-git": "^1.107.0"
   }
 }
