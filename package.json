@@ -4,8 +4,8 @@
   "description": "Translation management and deployment tools for hugo website",
   "scripts": {
     "test": "test.js",
-    "prebuild":"node ./build.js",
-    "build":"hugo"
+    "prebuild": "node ./build.js",
+    "build": "hugo"
   },
   "repository": {
     "type": "git",
@@ -15,6 +15,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "js-yaml": "^3.12.1",
+    "klaw": "^3.0.0",
     "mkdirp": "^0.5.1",
     "simple-git": "^1.107.0"
   }
