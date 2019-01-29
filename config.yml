@@ -18,18 +18,24 @@ languages:
     weight: 1
     menu:
       main:
-      - name: "Services"
-        url: "/services/"
-        weight: 1
-      - name: "Team"
-        url: "/team/"
+      - name: "Um æskusirkusinn"
+        url: "/um-aeskusirkusinn/"
         weight: 2
-      - name: "Testimonials"
-        url: "/testimonials/"
+      - name: "Hafa samband"
+        url: "/hafa-samband/"
         weight: 3
-      - name: "Contact"
-        url: "/contact/"
+      - name: "Tenglar"
+        url: "/tenglar/"
         weight: 4
+      - name: "Skra inn"
+        url: "/innri-vefur/"
+        weight: 5
+      - name: "Sumarnámskeið"
+        url: "/sumarnamskeid/"
+        weight: 6
+      - name: "Vetrarstarf"
+        url: "/vetrarstarf/"
+        weight: 7
   en:
     title: "Aeskusirkus"
     contentDir: "content/en"
@@ -38,15 +44,21 @@ languages:
     weight: 2
     menu:
       main:
-      - name: "Services"
-        url: "/services/"
-        weight: 1
-      - name: "Team"
-        url: "/team/"
+      - name: "About Aeskusirkus"
+        url: "/en/about/"
         weight: 2
-      - name: "Testimonials"
-        url: "/testimonials/"
-        weight: 3
       - name: "Contact"
-        url: "/contact/"
+        url: "/en/contact/"
+        weight: 3
+      - name: "Links"
+        url: "/en/links/"
         weight: 4
+      - name: "Log In"
+        url: "/en/members/"
+        weight: 5
+      - name: "Summer Classes"
+        url: "/en/summer/"
+        weight: 6
+      - name: "Winter Activities"
+        url: "/en/winter/"
+        weight: 7

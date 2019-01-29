@@ -7,7 +7,7 @@
   <title>{{ block "title" . }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {{ block "meta" . }}{{end}}
-  <link rel="icon" href="{{ .Site.BaseURL }}favicon.png">
+  <!-- <link rel="icon" href="{{ .Site.BaseURL }}favicon.png"> -->
 
   <!-- CSS -->
   {{- $inServerMode := .Site.IsServer }}
@@ -19,14 +19,20 @@
   {{ block "header_css" . }}{{ end }}
 
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
 </head>
 
 <body class='page {{ block "body_classes" . }}{{ end }}'>
-  {{ partial "main-menu-mobile.html" . }}
+  <div id="main-menu-mobile" class="main-menu-mobile">
+    <ul>
+      {{ partial "main-menu.html" . }}
+    </ul>
+  </div>
+
+
   <div class="wrapper">
     {{ partial "header.html" . }}
-    {{ block "main" . }}
-    {{ end }}
+    {{ block "main" . }}{{ end }}
   </div>
 
   {{ partial "footer.html" . }}

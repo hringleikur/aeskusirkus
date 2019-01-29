@@ -1,5 +1,4 @@
-<div id="main-menu" class="main-menu">
-  <ul>
+
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
     <li class="menu-item-{{ .Name | lower }}{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
@@ -9,5 +8,8 @@
       </a>
     </li>
     {{end}}
-  </ul>
-</div>
+    {{ if .IsTranslated }}
+        {{ range .Translations }}
+            <li class="menu-item-lang"><a href="{{ .Permalink }}">{{ .Language.Lang }}</a></li>
+        {{ end}}
+    {{ end }}

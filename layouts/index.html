@@ -1,4 +1,4 @@
-{{ define "title" }}Hugo Serif Theme Demo{{ end}}
+{{ define "title" }}{{ end}}
 {{ define "header_css" }}{{ end }}
 {{ define "body_classes" }}page-home{{ end }}
 {{ define "header_classes" }}header-transparent{{ end }}
@@ -6,13 +6,15 @@
 
 {{ define "main" }}
 
+<div class="page-top" style="background-image: url(images/header.jpg);background-size: cover;">
+
 <div class="intro pb-4">
   <div class="container">
     {{ .Content }}
   </div>
 </div>
 
-<div class="container pt-2">
+<div class="container pt-2 pb-2">
   <div class="call">
     <div class="call-box-top">
       <div class="call-phone"><strong>Phone: </strong> {{ .Site.Data.contact.phone }} </div>
@@ -26,6 +28,8 @@
       <a href="{{ .Site.BaseURL }}contact" class="button">Contact</a>
     </div>
   </div>
+</div>
+
 </div>
 
 {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
@@ -48,25 +52,9 @@
 </div>
 {{end}}
 
-<div class="strip strip-grey">
-<div class="container pt-5 pb-5 pt-md-8 pb-md-8">
-  <div class="row justify-content-center">
-    <div class="col-12">
-      <h2 class="text-center text-dark mb-3">Features</h2>
-    </div>
-    {{ range .Site.Data.features }}
-    <div class="col-12 col-md-6 col-lg-4 mb-2">
-      <div class="feature">
-        {{ if .image }}<div class="feature-image"><img alt="{{ .title }} logo" src="{{ .image }}" /></div> {{ end }}
-        <h2 class="feature-title">{{ .title }}</h2>
-        <div class="feature-content">{{ .description }}</div>
-      </div>
-    </div>
-    {{end}}
-  </div>
-</div>
-</div>
+
 {{ end }}
 
 {{ define "footer_js" }}
+
 {{ end }}

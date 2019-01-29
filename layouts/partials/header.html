@@ -6,7 +6,11 @@
     <div class="logo-mobile">
       <a href="{{ .Site.BaseURL }}"><img alt="Figurit Homepage" src="{{ .Site.BaseURL }}images/logo-mobile.svg" /></a>
     </div>
-    {{ partial "main-menu.html" . }}
+    <div id="main-menu" class="main-menu">
+      <ul>
+        {{ partial "main-menu.html" . }}
+      </ul>
+    </div>
     {{ partial "hamburger.html" . }}
   </div>
 </div>

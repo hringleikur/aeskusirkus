@@ -13,6 +13,38 @@ accept_roles:
   - admin
   - editor
 collections:
+  - name: "Settings"
+    label: "Settings"
+    delete : false
+    extension: "yml"
+    format: "yml"
+    files:
+      - label: Contact Information
+        name: contact
+        file: "data/contact.yml"
+        fields:
+          - label: Email
+            name: email
+            widget: string
+          - label: Phone
+            name: phone
+            widget: string
+          - label: Address
+            name: address
+            widget: text
+      - label: Social Media
+        name: social
+        file: "data/social.yml"
+        fields:
+          - label: Twitter
+            name: twitter
+            widget: string
+          - label: Instagram
+            name: instagram
+            widget: string
+          - label: Facebook
+            name: facebook
+            widget: string
   - name: "pages"
     label: "Pages"
     t_translations: true # Custom Key
@@ -20,6 +52,40 @@ collections:
     extension: "yml"
     format: "yml"
     files:
+      - label: "Heim / Home"
+        name: "heim"
+        file: "content/cms/_index.yml"
+        t_languages: # Custom Key
+          - code: en
+            langIfEmpty: "is"
+            file: "content/en/_index.md"
+          - code: is
+            file: "content/is/index.md"
+        fields:
+          - label: "Banner Image"
+            name: "image"
+            widget: "image"
+            required: false
+          - label: "Banner Image"
+            name: "image"
+            widget: "image"
+            required: false
+          - label: "Body (Icelandic)"
+            name: "body_is"
+            t_root: "body"
+            widget: "markdown"
+            required: true
+          - label: "Body (English)"
+            name: "body_en"
+            t_root: "body"
+            widget: "markdown"
+            required: false
+          - name: translationKey
+            widget: hidden
+          - name: layout
+            widget: hidden
+          - name: date
+            widget: hidden
       - label: "Um æskusirkusinn / About"
         name: "um-aeskusirkusinn"
         file: "content/cms/um-aeskusirkusinn.yml"
@@ -340,15 +406,15 @@ collections:
             widget: hidden
           - name: date
             widget: hidden
-  - name: "news"
-    label: "News"
-    folder: "content/cms/news"
+  - name: "article"
+    label: "News Article"
+    folder: "content/cms/innri-vefur/frettir"
     t_languages:
       - code: en
         langIfEmpty: "is"
         folder: "content/en/members/news"
       - code: is
-        folder: "content/en/innri-vefur/frettir"
+        folder: "content/is/innri-vefur/frettir"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     delete: true
@@ -360,6 +426,10 @@ collections:
         widget: "datetime"
         format: "YYYY-MM-DD hh:mma"
         required: true
+      - label: "Featured"
+        name: "featured"
+        widget: "boolean"
+        default: false
       - label: "Title (Icelandic)"
         name: title_is
         t_root: "title"
@@ -370,7 +440,7 @@ collections:
         t_root: "title"
         widget: string
         required: false
-      - label: "Image"
+      - label: "Primary Image"
         name: "image"
         widget: "image"
         required: false
@@ -394,3 +464,77 @@ collections:
         t_root: "body"
         widget: "markdown"
         required: false
+      - name: translationKey
+        widget: hidden
+      - name: layout
+        widget: hidden
+        default: news
+      - name: type
+        widget: hidden
+        default: news
+  - name: "activity"
+    label: "Activity"
+    folder: "content/cms/innri-vefur/deildir"
+    t_languages:
+      - code: en
+        langIfEmpty: "is"
+        folder: "content/en/members/disciplines"
+      - code: is
+        folder: "content/is/innri-vefur/deildir"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true
+    delete: true
+    extension: "yml"
+    format: "yml"
+    fields:
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD hh:mma"
+        required: true
+      - label: "Featured"
+        name: "featured"
+        widget: "boolean"
+        default: false
+      - label: "Title (Icelandic)"
+        name: title_is
+        t_root: "title"
+        widget: string
+        required: true
+      - label: "Title (English)"
+        name: title_en
+        t_root: "title"
+        widget: string
+        required: false
+      - label: "Primary Image"
+        name: "image"
+        widget: "image"
+        required: false
+      - label: "Short Description (Icelandic)"
+        name: "description_is"
+        t_root: "description"
+        widget: "text"
+        required: true
+      - label: "Short Description (English)"
+        name: "description_en"
+        t_root: "description"
+        widget: "text"
+        required: false
+      - label: "Page Body (Icelandic)"
+        name: "body_is"
+        t_root: "body"
+        widget: "markdown"
+        required: true
+      - label: "Page Body (English)"
+        name: "body_en"
+        t_root: "body"
+        widget: "markdown"
+        required: false
+      - name: translationKey
+        widget: hidden
+      - name: layout
+        widget: hidden
+        default: discipline
+      - name: type
+        widget: hidden
+        default: discipline

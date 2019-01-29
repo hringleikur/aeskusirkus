@@ -9,5 +9,10 @@
       </a>
     </li>
     {{end}}
+    {{ if .IsTranslated }}
+        {{ range .Translations }}
+            <li><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></li>
+        {{ end}}
+    {{ end }}
   </ul>
 </div>
