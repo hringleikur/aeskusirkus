@@ -38,9 +38,14 @@ catch (e)
   console.log(e);
 }
 
-function handleFields(handler, content, lang, retArray)
+function handleFields(handler, content, lang)
 {
-  var ret = retArray ? [] : {};
+  var ret = {};
+
+  if(handler.field)
+  {
+    handler.fields = [handler.field];
+  }
 
   handler.fields.forEach(field=>{
     var value = '';
@@ -51,7 +56,7 @@ function handleFields(handler, content, lang, retArray)
       key = field.name;
       if(content[field.name])
       {
-        value = handleFields(field.fields || [field.field], content[field.name], lang, field.widget=='list');
+        value = Array.isArray(content[field.name]) ? content[field.name].map(content=>handleFields(field, content, lang)) : handleFields(field, content[field.name], lang);
       }
     }
     else if(field.t_root)
@@ -77,9 +82,9 @@ function handleFields(handler, content, lang, retArray)
 
     if(value)
     {
-      retArray ? ret.push(value) : ret[key] = value;
+      ret[key] = value;
     }
-    
+
   });
   return ret;
 }
@@ -114,7 +119,7 @@ function handleContentFile(file)
         .replace(CONTENT_DIR, '')
         .replace(CONTENT_SUFFIX, '');
 
-      var outputFile = lang.file ? lang.file : lang.folder + frontmatter.translationKey + CONTENT_SUFFIX;
+      var outputFile = lang.file ? lang.file : lang.folder + "/" + path.basename(frontmatter.translationKey) + CONTENT_SUFFIX;
       mkdirp.sync(lang.file ? path.dirname(lang.file) : lang.folder);
 
       var stream = fs.createWriteStream(outputFile);

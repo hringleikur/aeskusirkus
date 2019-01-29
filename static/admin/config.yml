@@ -6,6 +6,7 @@ media_folder: "static/img/uploaded"
 public_folder: "/img/uploaded"
 media_library:
   name: cloudinary
+  output_filename_only: true
   config:
     cloud_name: hringleikur
     api_key: 976281589193922
@@ -413,6 +414,7 @@ collections:
   - name: "article"
     label: "News Article"
     folder: "content/cms/innri-vefur/frettir"
+    t_translations: true
     t_languages:
       - code: en
         langIfEmpty: "is"
@@ -480,6 +482,7 @@ collections:
   - name: "activity"
     label: "Activity"
     folder: "content/cms/innri-vefur/deildir"
+    t_translations: true
     t_languages:
       - code: en
         langIfEmpty: "is"
