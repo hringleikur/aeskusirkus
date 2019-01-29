@@ -18,6 +18,8 @@ collections:
     delete : false
     extension: "yml"
     format: "yml"
+    editor:
+      preview: false
     files:
       - label: Contact Information
         name: contact
@@ -26,12 +28,15 @@ collections:
           - label: Email
             name: email
             widget: string
+            required: true
           - label: Phone
             name: phone
             widget: string
+            required: false
           - label: Address
             name: address
             widget: text
+            required: false
       - label: Social Media
         name: social
         file: "data/social.yml"
@@ -39,12 +44,15 @@ collections:
           - label: Twitter
             name: twitter
             widget: string
+            required: false
           - label: Instagram
             name: instagram
             widget: string
+            required: false
           - label: Facebook
             name: facebook
             widget: string
+            required: false
   - name: "pages"
     label: "Pages"
     t_translations: true # Custom Key
@@ -62,10 +70,6 @@ collections:
           - code: is
             file: "content/is/index.md"
         fields:
-          - label: "Banner Image"
-            name: "image"
-            widget: "image"
-            required: false
           - label: "Banner Image"
             name: "image"
             widget: "image"
@@ -520,6 +524,23 @@ collections:
         t_root: "description"
         widget: "text"
         required: false
+      - label: "Gallery"
+        name: "galleryImages"
+        widget: "list"
+        fields:
+          - label: Image
+            name: image
+            widget: image
+          - label: "Caption (Icelandic)"
+            name: caption_is
+            t_root: "caption"
+            widget: string
+            required: false
+          - label: "Caption (English)"
+            name: caption_en
+            t_root: "caption"
+            widget: string
+            required: false
       - label: "Page Body (Icelandic)"
         name: "body_is"
         t_root: "body"

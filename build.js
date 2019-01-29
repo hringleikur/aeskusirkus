@@ -38,12 +38,57 @@ catch (e)
   console.log(e);
 }
 
+function handleFields(handler, content, lang, retArray)
+{
+  var ret = retArray ? [] : {};
+
+  handler.fields.forEach(field=>{
+    var value = '';
+    var key = '';
+
+    if(field.field || field.fields)
+    {
+      key = field.name;
+      if(content[field.name])
+      {
+        value = handleFields(field.fields || [field.field], content[field.name], lang, field.widget=='list');
+      }
+    }
+    else if(field.t_root)
+    {
+      key = field.t_root;
+      if(content[field.t_root + '_' + lang.code])
+      {
+        value = content[field.t_root + '_' + lang.code];
+      }
+      else if(lang.langIfEmpty && content[field.t_root + '_' + lang.langIfEmpty])
+      {
+        value = content[field.t_root + '_' + lang.langIfEmpty];
+      }
+    }
+    else
+    {
+      key = field.name;
+      if(content[field.name])
+      {
+        value = content[field.name];
+      }
+    }
+
+    if(value)
+    {
+      retArray ? ret.push(value) : ret[key] = value;
+    }
+    
+  });
+  return ret;
+}
+
 klaw(CONTENT_DIR)
   .on('data', item=>item.path.endsWith(CONTENT_SUFFIX) ? handleContentFile(item.path.substr(item.path.indexOf(CONTENT_DIR))) : null);
 
 function handleContentFile(file)
 {
-  console.log(file);
   var handler = handlers.find(handler=>file.startsWith(handler.path));
   if(!handler)
   {
@@ -54,46 +99,17 @@ function handleContentFile(file)
     var content = yaml.safeLoad(fs.readFileSync(file, 'utf8'));
     if(!content)
     {
-      throw new Error("Fine empty or not found");
+      throw new Error("File empty or not found");
     }
     handler.languages.forEach(lang=>{
-      var frontmatter = {};
       var body = "";
-      handler.fields.forEach(field=>{
-        var value;
-        var key;
-        if(field.t_root)
-        {
-          key = field.t_root;
-          if(content[field.t_root + '_' + lang.code])
-          {
-            value = content[field.t_root + '_' + lang.code];
-          }
-          else if(lang.langIfEmpty && content[field.t_root + '_' + lang.langIfEmpty])
-          {
-            value = content[field.t_root + '_' + lang.langIfEmpty];
-          }
-        }
-        else
-        {
-          key = field.name;
-          if(content[field.name])
-          {
-            value = content[field.name];
-          }
-        }
-        if(value)
-        {
-          if(key == 'body')
-          {
-            body = value;
-          }
-          else
-          {
-            frontmatter[key] = value;
-          }
-        }
-      });
+      var frontmatter = handleFields(handler, content, lang, false);
+      if(frontmatter.body)
+      {
+        body = frontmatter.body;
+        delete frontmatter.body;
+      }
+
       frontmatter.translationKey = file
         .replace(CONTENT_DIR, '')
         .replace(CONTENT_SUFFIX, '');
