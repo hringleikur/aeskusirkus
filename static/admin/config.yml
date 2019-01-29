@@ -424,6 +424,7 @@ collections:
     delete: true
     extension: "yml"
     format: "yml"
+    identifier_field : "title_is"
     fields:
       - label: "Date"
         name: "date"
@@ -490,6 +491,7 @@ collections:
     delete: true
     extension: "yml"
     format: "yml"
+    identifier_field : "title_is"
     fields:
       - label: "Date"
         name: "date"
