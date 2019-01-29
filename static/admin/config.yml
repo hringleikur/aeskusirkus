@@ -4,6 +4,7 @@ backend:
 publish_mode: editorial_workflow
 media_folder: "static/img/uploaded"
 public_folder: "/img/uploaded"
+mediaLibraryPrefix: "https://res.cloudinary.com/hringleikur/image/upload/t_media_lib_thumb/"
 media_library:
   name: cloudinary
   output_filename_only: true
@@ -530,9 +531,19 @@ collections:
         widget: "text"
         required: false
       - label: "Gallery"
-        name: "galleryImages"
+        name: "gallery"
         widget: "list"
         fields:
+          - label: "Title (Icelandic)"
+            name: title_is
+            t_root: "title"
+            widget: string
+            required: true
+          - label: "Title (English)"
+            name: title_en
+            t_root: "title"
+            widget: string
+            required: false
           - label: Image
             name: image
             widget: image
