@@ -1,0 +1,21 @@
+date: '2019-01-29 03:03pm'
+featured: true
+title_is: Icelandic Title
+title_en: English Title
+image: >-
+  https://res.cloudinary.com/hringleikur/image/upload/v1547287091/Tour%202018%20Promo/29.jun-63.jpg
+description_is: ICe Desc
+description_en: English Desc
+galleryImages:
+  - caption_en: English Rope
+    caption_is: Icelandic Rope
+    image: >-
+      https://res.cloudinary.com/hringleikur/image/upload/v1547287075/Tour%202018%20Promo/29.jun-4.jpg
+  - caption_en: English Trap
+    caption_is: ICelandic Trap
+    image: >-
+      https://res.cloudinary.com/hringleikur/image/upload/v1547287105/Tour%202018%20Promo/29.jun-35.jpg
+body_is: Icelandic Body
+body_en: English Body
+layout: discipline
+type: discipline
