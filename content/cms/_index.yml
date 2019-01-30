@@ -1,5 +1,10 @@
 image: Tour 2018 Promo/29.jun-101.jpg
-body_is: '![](Tour 2018 Promo/29.jun-79.jpg)'
+body_is: |-
+  This is before the image
+
+  ![](Tour 2018 Promo/29.jun-79.jpg)
+
+  This is after the image
 translationKey: home
 layout: home
 date: '2019-01-24 12:00am'
