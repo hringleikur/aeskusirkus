@@ -6,8 +6,6 @@ media_folder: "static/img/uploaded"
 public_folder: "/img/uploaded"
 media_library:
   name: cloudinary
-  output_filename_only: true
-  display_base_url: "https://res.cloudinary.com/hringleikur/image/upload/t_media_lib_thumb/"
   config:
     cloud_name: hringleikur
     api_key: 976281589193922
