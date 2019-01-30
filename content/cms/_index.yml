@@ -1,8 +1,11 @@
-image: Tour 2018 Promo/29.jun-101.jpg
-body_is: |-
+image: >-
+  https://res.cloudinary.com/hringleikur/image/upload/v1547287174/Tour%202018%20Promo/29.jun-110.jpg
+body_is: >-
   This is before the image
 
-  ![](Tour 2018 Promo/29.jun-79.jpg)
+
+  ![](https://res.cloudinary.com/hringleikur/image/upload/v1547287171/Tour%202018%20Promo/29.jun-121.jpg)
+
 
   This is after the image
 translationKey: home
