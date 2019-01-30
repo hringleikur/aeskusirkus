@@ -1,21 +1,27 @@
 date: '2019-01-29 03:03pm'
 featured: true
-title_is: Icelandic Title
-title_en: English Title
+title_is: Húlla
+title_en: Hooping
 image: >-
-  https://res.cloudinary.com/hringleikur/image/upload/v1547287091/Tour%202018%20Promo/29.jun-63.jpg
-description_is: ICe Desc
-description_en: English Desc
-galleryImages:
-  - caption_en: English Rope
-    caption_is: Icelandic Rope
-    image: >-
-      https://res.cloudinary.com/hringleikur/image/upload/v1547287075/Tour%202018%20Promo/29.jun-4.jpg
-  - caption_en: English Trap
-    caption_is: ICelandic Trap
-    image: >-
-      https://res.cloudinary.com/hringleikur/image/upload/v1547287105/Tour%202018%20Promo/29.jun-35.jpg
-body_is: Icelandic Body
-body_en: English Body
+  https://res.cloudinary.com/hringleikur/image/upload/v1547287122/Tour%202018%20Promo/29.jun-79.jpg
+description_is: Allskonar húllabrögð
+description_en: All kinds of hooping
+gallery:
+  - {}
+body_is: |-
+  ## Heimaæfingar fyrir húlla
+
+  * Nokkrar teygjur með hringinn 2-3 mín
+  * Húlla 10 – 15 mín
+    * á mjöðm hægri og vinstri
+    * á hendi ofan líkama, báðar hendur
+    * snúa sér í hringi o.s.frv…allskonar.
+  * Gömul trix 15 mín
+  * Frjáls æfing
+    * Eitthvað nýtt sem verið er að vinna að, trikk eða rútína.
+    * Farið í gegnum eitthvern dans/rútínu sem þekkt er eða verið var að læra.
+    * Nýlært trikk tengt við önnur með tónlist.
+  * Hrista sig og teygja, öndun. 2 mín
+body_en: ''
 layout: discipline
 type: discipline
