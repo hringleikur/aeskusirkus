@@ -1,0 +1,34 @@
+date: '2019-01-30 04:03pm'
+featured: true
+title_is: Stultur og einhjól
+title_en: Stilts and Unicycle
+image: >-
+  https://res.cloudinary.com/hringleikur/image/upload/v1547287091/Tour%202018%20Promo/29.jun-63.jpg
+description_is: Sirkusfarartækin
+description_en: Circus Transportation
+gallery:
+  - {}
+body_is: |-
+  ## Heimaæfingar
+
+  ### 1. stig
+  * Hjóla óstudd 5 snúninga ( ~5 m )
+  * Upp á hjól með stuðning
+
+  ### 2. stig
+  * Beygja í báðar áttir
+  * Upp á hjól óstudd (Free Mount)
+  * Hinkrað við / (Stalls)
+
+  ### 3. stig
+  * Hoppað
+  * Fleiri en ein aðferð við ‘Free Mount’
+  * Rokkað í 15 sek
+  * Leiða aðra á einhjólum (snúningur)
+  * Lyft öðrum fæti af í rokki
+
+  ### 4. stig
+  * Hoppað á ferð
+  * Rokkað á einum fæti
+layout: discipline
+type: discipline
