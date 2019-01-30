@@ -1,9 +1,10 @@
 backend:
   name: git-gateway
   branch: master
-publish_mode: editorial_workflow
 media_folder: "static/img/uploaded"
 public_folder: "/img/uploaded"
+t_preprocess_images: true
+t_default_image_transformation : strip
 media_library:
   name: cloudinary
   config:
