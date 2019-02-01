@@ -1,0 +1,11 @@
+title_en: "Please log In"
+title_is: "Please Log In"
+button_en: "Unlock"
+button_is: "Unlock"
+help_en: >-
+  Enter the password to continue. If you do not have the password, contact us for help.
+help_is: >-
+  Enter the password to continue. If you do not have the password, contact us for help.
+password: sirkus!
+type: auth
+layout: auth

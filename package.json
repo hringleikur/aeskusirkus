@@ -5,7 +5,8 @@
   "scripts": {
     "test": "test.js",
     "prebuild": "node ./build.js",
-    "build": "hugo"
+    "build": "hugo",
+    "postbuild": "node ./secure.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
     "js-yaml": "^3.12.1",
     "klaw": "^3.0.0",
     "mkdirp": "^0.5.1",
-    "simple-git": "^1.107.0"
+    "simple-git": "^1.107.0",
+    "staticrypt": "^1.2.0"
   }
 }

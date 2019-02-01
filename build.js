@@ -17,11 +17,11 @@ try
     .forEach(collection=>{
       if(collection.files)
       {
-        collection.files.forEach(file=>handlers.push({
+        collection.files.forEach(file=>file.t_languages ? handlers.push({
           path : file.file,
           languages : file.t_languages,
           fields : file.fields
-        }))
+        }):null)
       }
       else
       {
@@ -97,6 +97,7 @@ function handleContentFile(file)
   var handler = handlers.find(handler=>file.startsWith(handler.path));
   if(!handler)
   {
+    console.log(file);
     return;
   }
   try
@@ -119,7 +120,7 @@ function handleContentFile(file)
         .replace(CONTENT_DIR, '')
         .replace(CONTENT_SUFFIX, '');
 
-      var outputFile = lang.file ? lang.file : lang.folder + "/" + path.basename(frontmatter.translationKey) + CONTENT_SUFFIX;
+      var outputFile = lang.file ? lang.file : lang.folder + "/" + path.basename(frontmatter.translationKey) + '.md';
       mkdirp.sync(lang.file ? path.dirname(lang.file) : lang.folder);
 
       var stream = fs.createWriteStream(outputFile);

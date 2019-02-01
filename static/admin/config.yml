@@ -19,6 +19,7 @@ collections:
     delete : false
     extension: "yml"
     format: "yml"
+    t_translations : true
     editor:
       preview: false
     files:
@@ -54,6 +55,72 @@ collections:
             name: facebook
             widget: string
             required: false
+      - label: User Authentication
+        name : "auth"
+        file : "content/cms/auth.yml"
+        t_languages: # Custom Key
+          - code: en
+            langIfEmpty: "is"
+            file: "content/en/auth.md"
+          - code: is
+            file: "content/is/auth.md"
+        fields :
+          - label: "Password"
+            name: password
+            widget: string
+            required: true
+          - label: "Page Title (Icelandic)"
+            name: title_is
+            t_root: "title"
+            widget: string
+            required: true
+          - label: "Page Title (English)"
+            name: title_en
+            t_root: "title"
+            widget: string
+            required: false
+          - label: "Button (Icelandic)"
+            name: button_is
+            t_root: "button"
+            widget: string
+            required: true
+          - label: "Button (English)"
+            name: button_en
+            t_root: "button"
+            widget: string
+            required: false
+          - label: "Help (Icelandic)"
+            name: help_is
+            t_root: "help"
+            widget: string
+            required: true
+          - label: "Help (English)"
+            name: help_en
+            t_root: "help"
+            widget: string
+            required: false
+          - name: layout
+            widget: hidden
+          - name: date
+            widget: hidden
+          - name: type
+            widget: hidden
+      - label: Social Media
+        name: social
+        file: "data/social.yml"
+        fields:
+          - label: Twitter
+            name: twitter
+            widget: string
+            required: false
+          - label: Instagram
+            name: instagram
+            widget: string
+            required: false
+          - label: Facebook
+            name: facebook
+            widget: string
+            required: false
   - name: "pages"
     label: "Pages"
     t_translations: true # Custom Key
@@ -69,7 +136,7 @@ collections:
             langIfEmpty: "is"
             file: "content/en/_index.md"
           - code: is
-            file: "content/is/index.md"
+            file: "content/is/_index.md"
         fields:
           - label: "Banner Image"
             name: "image"
@@ -90,6 +157,8 @@ collections:
           - name: layout
             widget: hidden
           - name: date
+            widget: hidden
+          - name: type
             widget: hidden
       - label: "Um æskusirkusinn / About"
         name: "um-aeskusirkusinn"
@@ -131,6 +200,8 @@ collections:
             widget: hidden
           - name: date
             widget: hidden
+          - name: type
+            widget: hidden
       - label: "Hafa samband / Contact"
         name: "hafa-samband"
         file: "content/cms/hafa-samband.yml"
@@ -170,6 +241,8 @@ collections:
           - name: layout
             widget: hidden
           - name: date
+            widget: hidden
+          - name: type
             widget: hidden
       - label: "Tenglar / Links"
         name: "tenglar"
@@ -211,6 +284,8 @@ collections:
             widget: hidden
           - name: date
             widget: hidden
+          - name: type
+            widget: hidden
       - label: "Innri vefur / Members"
         name: "innri-vefur"
         file: "content/cms/innri-vefur/_index.yml"
@@ -250,6 +325,10 @@ collections:
           - name: layout
             widget: hidden
           - name: date
+            widget: hidden
+          - name: type
+            widget: hidden
+          - name: outputs
             widget: hidden
       - label: "Fréttir  / News"
         name: "frettir"
@@ -291,6 +370,10 @@ collections:
             widget: hidden
           - name: date
             widget: hidden
+          - name: type
+            widget: hidden
+          - name: outputs
+            widget: hidden
       - label: "Deildir / Disciplines"
         name: "deildir"
         file: "content/cms/innri-vefur/deildir/_index.yml"
@@ -330,6 +413,10 @@ collections:
           - name: layout
             widget: hidden
           - name: date
+            widget: hidden
+          - name: type
+            widget: hidden
+          - name: outputs
             widget: hidden
       - label: "Sumarnámskeið / Summer Classes"
         name: "sumarnamskeid"
@@ -371,6 +458,8 @@ collections:
             widget: hidden
           - name: date
             widget: hidden
+          - name: type
+            widget: hidden
       - label: "Vetrarstarf / Winter Activities"
         name: "vetrarstarf"
         file: "content/cms/vetrarstarf.yml"
@@ -410,6 +499,8 @@ collections:
           - name: layout
             widget: hidden
           - name: date
+            widget: hidden
+          - name: type
             widget: hidden
   - name: "article"
     label: "News Article"
@@ -479,6 +570,11 @@ collections:
       - name: type
         widget: hidden
         default: news
+      - name: outputs
+        widget: hidden
+        default:
+          - html
+          - json
   - name: "activity"
     label: "Activity"
     folder: "content/cms/innri-vefur/deildir"
@@ -574,3 +670,8 @@ collections:
       - name: type
         widget: hidden
         default: discipline
+      - name: outputs
+        widget: hidden
+        default:
+          - html
+          - json
