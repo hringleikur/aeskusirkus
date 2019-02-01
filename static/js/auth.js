@@ -5,7 +5,9 @@ if(c)
 {
   var pp = CryptoJS.AES.decrypt(c, cpp).toString(CryptoJS.enc.Utf8);
   try {
-    decrypt(pp)
+    ready(function(){
+      decrypt(pp);
+    });
   }
   catch(e) {
     document.getElementById("badpw").style.display = "block";
@@ -43,7 +45,20 @@ function decrypt(pp)
   }
 
   var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, pp).toString(CryptoJS.enc.Utf8);
-  document.close();
+
   document.write(plainHTML);
   document.close();
+}
+
+function ready(fn) {
+  if (document.readyState != 'loading') {
+    fn();
+  } else if (document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', fn);
+  } else {
+    document.attachEvent('onreadystatechange', function() {
+      if (document.readyState != 'loading')
+        fn();
+    });
+  }
 }
