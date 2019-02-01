@@ -79,6 +79,16 @@ collections:
             t_root: "title"
             widget: string
             required: false
+          - label: "Error Message (Icelandic)"
+            name: error_is
+            t_root: "error"
+            widget: string
+            required: true
+          - label: "Error Message (English)"
+            name: error_en
+            t_root: "error"
+            widget: string
+            required: false
           - label: "Button (Icelandic)"
             name: button_is
             t_root: "button"

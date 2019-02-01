@@ -2,6 +2,8 @@ title_en: "Please log In"
 title_is: "Please Log In"
 button_en: "Unlock"
 button_is: "Unlock"
+error_en: "Incorrect password. Please try again."
+error_is: "Incorrect password. Please try again."
 help_en: >-
   Enter the password to continue. If you do not have the password, contact us for help.
 help_is: >-

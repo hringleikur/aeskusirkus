@@ -29,7 +29,7 @@ document.getElementById('sc-form').addEventListener('submit', function(e) {
       decrypt(passphrase)
     }
     catch(e) {
-      document.getElementById("badpw").style.display = "block";
+      document.getElementById("form").style.display = "block";
     }
 });
 

@@ -50,6 +50,36 @@
   {{ end }}
 
   {{ partial "google-analytics.html" . }}
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script>
+
+    var cn = "aesku_login";
+    var c = Cookies.get(cn);
+    if(c)
+    {
+      forEach(document.getElementsByClassName('login-link'), function(){
+        this.style.display = "none";
+      });
+      forEach(document.getElementsByClassName('logout-link'), function(){
+        this.addEventListener("click", function(){
+          Cookies.remove(cn);
+        });
+      });
+    }
+    else
+    {
+      forEach(document.getElementsByClassName('logout-link'), function(){
+        this.style.display = "none";
+      });
+    }
+
+    function forEach(list, func, args)
+    {
+      for (var i = 0; i < list.length; i++) {
+          func.apply(list[i], args);
+      }
+    }
+  </script>
 
 </body>
 </html>

@@ -29,6 +29,11 @@ languages:
         weight: 4
       - name: "Skra inn"
         url: "/innri-vefur/"
+        identifier: "login-link"
+        weight: 5
+      - name: "Útskra"
+        url: "/"
+        identifier: "logout-link"
         weight: 5
       - name: "Sumarnámskeið"
         url: "/sumarnamskeid/"
@@ -55,6 +60,11 @@ languages:
         weight: 4
       - name: "Log In"
         url: "/en/members/"
+        identifier: "login-link"
+        weight: 5
+      - name: "Log Out"
+        url: "/"
+        identifier: "logout-link"
         weight: 5
       - name: "Summer Classes"
         url: "/en/summer/"
