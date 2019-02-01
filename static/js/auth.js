@@ -43,7 +43,7 @@ function decrypt(pp)
   }
 
   var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, pp).toString(CryptoJS.enc.Utf8);
-
+  document.close();
   document.write(plainHTML);
   document.close();
 }
