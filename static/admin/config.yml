@@ -218,7 +218,7 @@ collections:
         t_languages: # Custom Key
           - code: en
             langIfEmpty: "is"
-            file: "content/en/contact.md"
+            file: "content/en/hafa-samband.md"
           - code: is
             file: "content/is/hafa-samband.md"
         fields:

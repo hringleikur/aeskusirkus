@@ -1,19 +1,18 @@
-.service-summary {
+.discipline-summary {
   display: flex;
   align-items: flex-start;
-  .service-image {
-    flex: 0 0 100px;
-    margin-right: 10px;
-    img {
+
+  .discipline-image {
       max-width: 100%;
       height: auto;
-    }
+
   }
-  .service-content {
+  .discipline-content {
     flex: 1;
-    .service-title {
+    .discipline-title {
       font-family: $font-family-heading;
       font-size: 1.6rem;
+
     }
     p {
       color: $secondary;

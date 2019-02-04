@@ -5,12 +5,12 @@
 {{ define "meta"}}{{ end }}
 
 {{ define "main" }}
+{{ $base := "https://res.cloudinary.com/hringleikur/image/upload/" }}
+<div class="page-top" style="background-image: url({{ $base }}t_header/{{ strings.TrimPrefix $base .Params.image }});background-size: cover;">
 
-<div class="page-top" style="background-image: url(images/header.jpg);background-size: cover;">
-
-<div class="intro pb-4">
+<div class="intro pt-2 pb-2">
   <div class="container">
-    {{ .Content }}
+    <img alt="Home" src="{{ .Site.BaseURL }}images/logo.svg"></a>
   </div>
 </div>
 
@@ -25,32 +25,45 @@
       </div>
     </div>
     <div class="call-box-bottom">
-      <a href="{{ .Site.BaseURL }}contact" class="button">Contact</a>
+      {{ with .Site.GetPage "hafa-samband" }}<a href="{{ .Permalink }}" class="button">{{ .Title }}</a>{{ end }}
+
     </div>
   </div>
 </div>
 
 </div>
 
-{{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
-{{if gt (len $services) 0}}
-<div class="container pt-8 pt-md-12 pb-md-12">
+<div class="container pt-2 pb-2">{{ .Content }}</div>
+
+{{ $articles := where (where .Site.RegularPages "Type" "news") ".Params.featured" true }}
+{{if gt (len $articles) 0}}
+<div class="container" id="homepage-news">
   <div class="row justify-content-start">
-    <div class="col-12">
-      <h2 class="mb-3">Services</h2>
+    {{ $articles := where (where .Site.RegularPages "Type" "news") ".Params.featured" true }}
+    {{ range last 1 (sort $articles ".Params.date") }}
+    <div>
+      {{ .Render "summary" }}
     </div>
-    {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
-    {{ range first 6 (sort $services ".Params.weight") }}
+    {{ end }}
+  </div>
+</div>
+{{end}}
+
+{{ $disciplines := where (where .Site.RegularPages "Type" "discipline") ".Params.featured" true }}
+{{if gt (len $disciplines) 0}}
+<div class="container pt-4 pt-md-6 pb-md-12" id="homepage-disciplines">
+  <div class="row justify-content-start">
+    {{ $disciplines := where (where .Site.RegularPages "Type" "discipline") ".Params.featured" true }}
+    {{ range first 6 (sort $disciplines ".Params.weight") }}
     <div class="col-12 col-md-4 mb-1">
       {{ .Render "summary" }}
     </div>
     {{ end }}
-    <div class="col-12 text-center">
-      <a class="button button-primary" href="{{ .Site.BaseURL }}services">View All Services</a>
-    </div>
   </div>
 </div>
 {{end}}
+
+
 
 
 {{ end }}
