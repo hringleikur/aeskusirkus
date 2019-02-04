@@ -11,5 +11,6 @@ body_is: |-
 
   Mailing list link
 layout: contact
+show_form: true
 type: contact
 date: '2019-01-24 12:00am'

@@ -1,3 +1,4 @@
+# Contact
 sendMessage:
   other: send message
 yourName:
@@ -14,3 +15,13 @@ email:
   other: email
 address:
   other: address
+
+# Auth
+authPleaseLogIn:
+  other: Please log In
+authUnlock:
+  other: Unlock
+authIncorrectPassword:
+  other: Incorrect password. Please try again.
+authEnterPassword:
+  other: Enter the password to continue. If you do not have the password, contact us for help.

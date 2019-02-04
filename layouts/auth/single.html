@@ -2,7 +2,7 @@
 <html class="sc-html">
 <head>
     <meta charset="utf-8">
-    <title>{{ .Params.title }} - {{ .Site.Title }}</title>
+    <title>{{ i18n "authPleaseLogIn" | humanize }} - {{ .Site.Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- do not cache this page -->
@@ -47,9 +47,9 @@
   <div id="form" class="sc-page" style="display:none">
       <div class="sc-form">
           <div class="sc-instructions">
-              <p class="sc-title">{{ .Params.title }}</p>
-              <p>{{ .Params.help }}</p>
-              <p id="badpw">{{ .Params.error }}</p>
+              <p class="sc-title">{{ i18n "authPleaseLogIn" | humanize }}</p>
+              <p>{{ i18n "authEnterPassword" | humanize }}</p>
+              <p id="badpw">{{ i18n "authIncorrectPassword" | humanize }}</p>
           </div>
 
           <hr class="sc-hr">
@@ -61,7 +61,7 @@
                      placeholder="Password"
                      autofocus/>
 
-              <input type="submit" class="sc-decrypt-button" value="{{ .Params.button }}"/>
+              <input type="submit" class="sc-decrypt-button" value="{{ i18n "authUnlock" | humanize }}"/>
           </form>
       </div>
   </div>

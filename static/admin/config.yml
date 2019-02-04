@@ -68,46 +68,6 @@ collections:
             name: password
             widget: string
             required: true
-          - label: "Page Title (Icelandic)"
-            name: title_is
-            t_root: "title"
-            widget: string
-            required: true
-          - label: "Page Title (English)"
-            name: title_en
-            t_root: "title"
-            widget: string
-            required: false
-          - label: "Error Message (Icelandic)"
-            name: error_is
-            t_root: "error"
-            widget: string
-            required: true
-          - label: "Error Message (English)"
-            name: error_en
-            t_root: "error"
-            widget: string
-            required: false
-          - label: "Button (Icelandic)"
-            name: button_is
-            t_root: "button"
-            widget: string
-            required: true
-          - label: "Button (English)"
-            name: button_en
-            t_root: "button"
-            widget: string
-            required: false
-          - label: "Help (Icelandic)"
-            name: help_is
-            t_root: "help"
-            widget: string
-            required: true
-          - label: "Help (English)"
-            name: help_en
-            t_root: "help"
-            widget: string
-            required: false
           - name: layout
             widget: hidden
           - name: date
@@ -150,6 +110,19 @@ collections:
             name: "image"
             widget: "image"
             required: false
+          - label: "Show Contact Banner on Home Page"
+            name: "show_banner"
+            widget: "boolean"
+            required: true
+            default: true
+          - label: "Show Featured News on Home Page"
+            name: "show_news"
+            widget: "select"
+            required: true
+            options:
+              - { label: "Always", value: "always" }
+              - { label: "Only for logged in users", value: "members" }
+              - { label: "Never", value: "never" }
           - label: "Body (Icelandic)"
             name: "body_is"
             t_root: "body"
@@ -160,8 +133,6 @@ collections:
             t_root: "body"
             widget: "markdown"
             required: false
-          - name: translationKey
-            widget: hidden
           - name: layout
             widget: hidden
           - name: date
@@ -201,8 +172,6 @@ collections:
             t_root: "body"
             widget: "markdown"
             required: false
-          - name: translationKey
-            widget: hidden
           - name: layout
             widget: hidden
           - name: date
@@ -232,6 +201,11 @@ collections:
             name: "image"
             widget: "image"
             required: false
+          - label: "Show Form"
+            name: "show_form"
+            widget: "boolean"
+            required: true
+            default: true
           - label: "Body (Icelandic)"
             name: "body_is"
             t_root: "body"
@@ -242,8 +216,6 @@ collections:
             t_root: "body"
             widget: "markdown"
             required: false
-          - name: translationKey
-            widget: hidden
           - name: layout
             widget: hidden
           - name: date
@@ -283,8 +255,6 @@ collections:
             t_root: "body"
             widget: "markdown"
             required: false
-          - name: translationKey
-            widget: hidden
           - name: layout
             widget: hidden
           - name: date
@@ -324,8 +294,6 @@ collections:
             t_root: "body"
             widget: "markdown"
             required: false
-          - name: translationKey
-            widget: hidden
           - name: layout
             widget: hidden
           - name: date
@@ -367,8 +335,6 @@ collections:
             t_root: "body"
             widget: "markdown"
             required: false
-          - name: translationKey
-            widget: hidden
           - name: layout
             widget: hidden
           - name: date
@@ -410,8 +376,6 @@ collections:
             t_root: "body"
             widget: "markdown"
             required: false
-          - name: translationKey
-            widget: hidden
           - name: layout
             widget: hidden
           - name: date
@@ -453,8 +417,6 @@ collections:
             t_root: "body"
             widget: "markdown"
             required: false
-          - name: translationKey
-            widget: hidden
           - name: layout
             widget: hidden
           - name: date
@@ -494,8 +456,6 @@ collections:
             t_root: "body"
             widget: "markdown"
             required: false
-          - name: translationKey
-            widget: hidden
           - name: layout
             widget: hidden
           - name: date
@@ -561,8 +521,6 @@ collections:
         t_root: "body"
         widget: "markdown"
         required: false
-      - name: translationKey
-        widget: hidden
       - name: layout
         widget: hidden
         default: news
@@ -660,8 +618,6 @@ collections:
         t_root: "body"
         widget: "markdown"
         required: false
-      - name: translationKey
-        widget: hidden
       - name: layout
         widget: hidden
         default: discipline
