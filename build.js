@@ -116,12 +116,20 @@ function handleContentFile(file)
         delete frontmatter.body;
       }
 
-      frontmatter.translationKey = file
-        .replace(CONTENT_DIR, '')
-        .replace(CONTENT_SUFFIX, '');
+      if(lang.file)
+      {
+        frontmatter.url = lang.file;
+      }
+      else if(lang.folder)
+      {
+        frontmatter.url = lang.folder + "/" + path.basename(file, CONTENT_SUFFIX)
+      }
 
-      var outputFile = lang.file ? lang.file : lang.folder + "/" + path.basename(frontmatter.translationKey) + '.md';
-      mkdirp.sync(lang.file ? path.dirname(lang.file) : lang.folder);
+      var outputFile = file
+        .replace(CONTENT_DIR, 'content/')
+        .replace(CONTENT_SUFFIX, '.' + lang.code + '.md');
+
+      mkdirp.sync(path.dirname(outputFile));
 
       var stream = fs.createWriteStream(outputFile);
       stream.once('open', function(fd) {

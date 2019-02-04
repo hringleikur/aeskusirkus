@@ -1,4 +1,5 @@
 title_is: Hafa samband
+title_en: Contact
 image: >-
   https://res.cloudinary.com/hringleikur/image/upload/v1547287099/Tour%202018%20Promo/29.jun-36.jpg
 body_is: |-
@@ -9,6 +10,6 @@ body_is: |-
   Etc.
 
   Mailing list link
-translationKey: hafa-samband
-layout: hafa-samband
+layout: contact
+type: contact
 date: '2019-01-24 12:00am'

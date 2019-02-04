@@ -61,9 +61,8 @@ collections:
         t_languages: # Custom Key
           - code: en
             langIfEmpty: "is"
-            file: "content/en/auth.md"
+            file: "en/auth"
           - code: is
-            file: "content/is/auth.md"
         fields :
           - label: "Password"
             name: password
@@ -144,9 +143,8 @@ collections:
         t_languages: # Custom Key
           - code: en
             langIfEmpty: "is"
-            file: "content/en/_index.md"
+            file: "en/"
           - code: is
-            file: "content/is/_index.md"
         fields:
           - label: "Banner Image"
             name: "image"
@@ -176,9 +174,8 @@ collections:
         t_languages: # Custom Key
           - code: en
             langIfEmpty: "is"
-            file: "content/en/about.md"
+            file: "en/about"
           - code: is
-            file: "content/is/um-aeskusirkusinn.md"
         fields:
           - label: "Title (Icelandic)"
             name: title_is
@@ -218,9 +215,8 @@ collections:
         t_languages: # Custom Key
           - code: en
             langIfEmpty: "is"
-            file: "content/en/hafa-samband.md"
+            file: "en/contact"
           - code: is
-            file: "content/is/hafa-samband.md"
         fields:
           - label: "Title (Icelandic)"
             name: title_is
@@ -260,9 +256,8 @@ collections:
         t_languages: # Custom Key
           - code: en
             langIfEmpty: "is"
-            file: "content/en/links.md"
+            file: "en/links"
           - code: is
-            file: "content/is/tenglar.md"
         fields:
           - label: "Title (Icelandic)"
             name: title_is
@@ -302,9 +297,8 @@ collections:
         t_languages: # Custom Key
           - code: en
             langIfEmpty: "is"
-            file: "content/en/members/_index.md"
+            file: "en/members"
           - code: is
-            file: "content/is/innri-vefur/_index.md"
         fields:
           - label: "Title (Icelandic)"
             name: title_is
@@ -346,9 +340,8 @@ collections:
         t_languages: # Custom Key
           - code: en
             langIfEmpty: "is"
-            file: "content/en/members/news/_index.md"
+            file: "en/members/news"
           - code: is
-            file: "content/is/innri-vefur/frettir/_index.md"
         fields:
           - label: "Title (Icelandic)"
             name: title_is
@@ -390,9 +383,8 @@ collections:
         t_languages: # Custom Key
           - code: en
             langIfEmpty: "is"
-            file: "content/en/members/disciplines/_index.md"
+            file: "en/members/disciplines"
           - code: is
-            file: "content/is/innri-vefur/deildir/_index.md"
         fields:
           - label: "Title (Icelandic)"
             name: title_is
@@ -434,9 +426,8 @@ collections:
         t_languages: # Custom Key
           - code: en
             langIfEmpty: "is"
-            file: "content/en/summer.md"
+            file: "en/summer"
           - code: is
-            file: "content/is/sumarnamskeid.md"
         fields:
           - label: "Title (Icelandic)"
             name: title_is
@@ -476,9 +467,8 @@ collections:
         t_languages: # Custom Key
           - code: en
             langIfEmpty: "is"
-            file: "content/en/winter.md"
+            file: "en/winter"
           - code: is
-            file: "content/is/vetrarstarf.md"
         fields:
           - label: "Title (Icelandic)"
             name: title_is
@@ -519,9 +509,8 @@ collections:
     t_languages:
       - code: en
         langIfEmpty: "is"
-        folder: "content/en/members/news"
+        folder: "en/members/news"
       - code: is
-        folder: "content/is/innri-vefur/frettir"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     delete: true
@@ -592,9 +581,8 @@ collections:
     t_languages:
       - code: en
         langIfEmpty: "is"
-        folder: "content/en/members/disciplines"
+        folder: "en/members/disciplines"
       - code: is
-        folder: "content/is/innri-vefur/deildir"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     delete: true
