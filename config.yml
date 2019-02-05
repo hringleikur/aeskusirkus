@@ -30,6 +30,10 @@ languages:
         url: "/innri-vefur/"
         identifier: "login-link"
         weight: 5
+      - name: "Innri vefur"
+        url: "/innri-vefur/"
+        identifier: "members-link"
+        weight: 5
       - name: "Útskra"
         url: "/"
         identifier: "logout-link"
@@ -60,8 +64,12 @@ languages:
         url: "/en/members/"
         identifier: "login-link"
         weight: 5
+      - name: "Members"
+        url: "/en/members/"
+        identifier: "members-link"
+        weight: 5
       - name: "Log Out"
-        url: "/"
+        url: "/en/"
         identifier: "logout-link"
         weight: 5
       - name: "Summer Classes"

@@ -21,6 +21,6 @@ body_is: >-
 
 
   Tímabil námskeiða og kostnaður:
-translationKey: sumarnamskeid
-layout: sumarnamskeid
+type: about
+layout: about
 date: '2019-01-24 12:00am'

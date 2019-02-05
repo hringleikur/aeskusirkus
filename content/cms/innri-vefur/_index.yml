@@ -3,6 +3,6 @@ title_en: MEmbers
 image: >-
   https://res.cloudinary.com/hringleikur/image/upload/v1547287082/Tour%202018%20Promo/29.jun-11.jpg
 body_is: Members section. Needs password
-translationKey: innri-vefur
-layout: innri-vefur
+type: members
+layout: members
 date: '2019-01-24 12:00am'
