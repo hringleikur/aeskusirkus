@@ -3,11 +3,10 @@ featured: true
 title_is: Jafnvaegi
 title_en: Balance
 image: >-
-  https://res.cloudinary.com/hringleikur/image/upload/v1547287174/Tour%202018%20Promo/29.jun-110.jpg
+  https://res.cloudinary.com/hringleikur/image/upload/v1549806168/aesku/tightrope.png
 description_is: 'Lína, kúla og veltibretti'
 description_en: 'Tightwire, Ball, and Rollabolla'
-gallery:
-  - {}
+gallery: []
 body_is: >-
   ## Undirstöðuatriði
 
@@ -43,6 +42,3 @@ body_is: >-
   að æfa jafnvægið, sérstaklega fyrir kúluna.
 layout: discipline
 type: discipline
-
-  
-  
