@@ -3,11 +3,10 @@ featured: true
 title_is: Juggle
 title_en: Juggling
 image: >-
-  https://res.cloudinary.com/hringleikur/image/upload/v1547287110/Tour%202018%20Promo/29.jun-44.jpg
+  https://res.cloudinary.com/hringleikur/image/upload/v1549806168/aesku/juggle.png
 description_is: 'Keilur, boltar, hringir, diablo, poi og ýmislegt annað'
 description_en: 'Clubs, balls, rings, diablo, poi, and various other things'
-gallery:
-  - {}
+gallery: []
 body_is: |-
   ## Heimaæfingar fyrir juggle
 
@@ -29,6 +28,3 @@ body_is: |-
     * Borða epli (eða banka létt á ennið)
 layout: discipline
 type: discipline
-
-  
-  
