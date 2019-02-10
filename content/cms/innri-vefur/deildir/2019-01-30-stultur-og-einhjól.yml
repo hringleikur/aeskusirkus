@@ -3,11 +3,10 @@ featured: true
 title_is: Stultur og einhjól
 title_en: Stilts and Unicycle
 image: >-
-  https://res.cloudinary.com/hringleikur/image/upload/v1547287091/Tour%202018%20Promo/29.jun-63.jpg
+  https://res.cloudinary.com/hringleikur/image/upload/v1549806168/aesku/stilt.png
 description_is: Sirkusfarartækin
 description_en: Circus Transportation
-gallery:
-  - {}
+gallery: []
 body_is: |-
   ## Heimaæfingar
 
@@ -32,6 +31,3 @@ body_is: |-
   * Rokkað á einum fæti
 layout: discipline
 type: discipline
-
-  
-  
