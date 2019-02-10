@@ -3,11 +3,10 @@ featured: true
 title_is: Trúðar
 title_en: Clowning
 image: >-
-  https://res.cloudinary.com/hringleikur/image/upload/v1547287075/Tour%202018%20Promo/29.jun-2.jpg
+  https://res.cloudinary.com/hringleikur/image/upload/v1549806168/aesku/clown.png
 description_is: Hahahahaha
 description_en: Hahahahaha
-gallery:
-  - {}
+gallery: []
 body_is: |-
   ## Heimaæfingar fyrir trúða
 
@@ -20,6 +19,3 @@ body_is: |-
   * Festast í glerkassa
 layout: discipline
 type: discipline
-
-  
-  
