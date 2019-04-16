@@ -1,26 +1,7 @@
 title_is: Sumarnamskeid
 image: >-
   https://res.cloudinary.com/hringleikur/image/upload/v1547287171/Tour%202018%20Promo/29.jun-121.jpg
-body_is: >-
-  Námskeiðið kennir grunntæknina í hinum ýmsu sirkuslistum svo sem
-  jafnvægislistum, línudansi, gripli (“juggling”), loftfimleikum, húllahoppi og
-  fleira.
-
-
-  Lögð er áhersla á gleði, fagmennsku og öryggi iðkenda með reyndum þjálfurum
-  sem hafa æft og kennt sirkuslistir í áraraðir.
-
-
-  Miðað er að því að allir nái árangri og komið er til móts við getustig hvers
-  og eins.
-
-
-  Kennt er í Ármanni Engjavegi 7, Laugardal.
-
-
-
-
-  Tímabil námskeiða og kostnaður:
-type: about
+body_is: "Námskeiðið kennir grunntæknina í hinum ýmsu sirkuslistum svo sem jafnvægislistum, línudansi, gripli (“juggling”), loftfimleikum, húllahoppi og fleira.\n\nLögð er áhersla á gleði, fagmennsku og öryggi iðkenda með reyndum þjálfurum sem hafa æft og kennt sirkuslistir í áraraðir.\\\nMiðað er að því að allir nái árangri og komið er til móts við getustig hvers og eins.\n\nKennt er í Ármanni Engjavegi 7, Laugardal.\\\nÍ ár höfum við bætt við klukkutíma svo námskeiðið er klukkan 9-14\n\nTímabil námskeiða og kostnaður:\n\n\n\n<style>\r\n\ntable {\r\n\n  font-family: arial, sans-serif;\r\n\n  border-collapse: collapse;\r\n\n  width: 100%;\r\n\n}\r\n\n\r\n\ntd, th {\r\n\n  border: 1px solid #dddddd;\r\n\n  text-align: left;\r\n\n  padding: 8px;\r\n\n}\r\n\n\r\n\ntr:nth-child(even) {\r\n\n  background-color: #dddddd;\r\n\n}\r\n\n</style>\r\n\n</head>\r\n\n<body>\r\n\n\r\n\n<h2></h2>\r\n\n<table>\r\n\n  <tr>\r\n\n\\    <th>Vika</th>\r\n\n\\    <th>Verð</th>\r\n\n\\    <th>Athugasemd</th>\r\n\n  </tr>\r\n\n  <tr>\r\n\n\\    <td>11.-14.júní</td>\r\n\n\\    <td>20.000kr</td>\r\n\n\\    <td>4 dagar</td>\r\n\n  </tr>\r\n\n  <tr>\r\n\n\\    <td>1.-5.júlí</td>\r\n\n\\    <td>25.000kr</td>\r\n\n\\    <td></td>\r\n\n  </tr>\r\n\n  <tr>\r\n\n\\    <td>8.-12.júlí</td>\r\n\n\\    <td>25.000kr</td>\r\n\n\\    <td></td>\r\n\n  </tr>\r\n\n  <tr>\r\n\n\\    <td>15.-19.júlí</td>\r\n\n\\    <td>25.000kr</td>\r\n\n\\    <td></td>\r\n\n  </tr>\r\n\n  <tr>\r\n\n\\    <td>6.-9.ágúst</td>\r\n\n\\    <td>20.000kr</td>\r\n\n\\    <td>4 dagar</td>\r\n\n  </tr>\r\n\n  <tr>\r\n\n\\    <td>12.-16.ágúst</td>\r\n\n\\    <td>25.000kr</td>\r\n\n\\    <td></td>\r\n\n  </tr>\r\n\n</table>"
 layout: about
 date: '2019-01-24 12:00am'
+type: about
