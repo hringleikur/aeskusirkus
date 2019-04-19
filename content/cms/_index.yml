@@ -3,8 +3,8 @@ image: >-
 show_banner: true
 show_news: members
 body_is: >-
-  Heim. This is some cotnent and some more content that I am putting here so
-  that we can see what test looks like when it is added int his way to this
-  page.
+  Velkomin á heimasíðu Æskusirkusins, hér getur þú séð upplýsingar um sumar og
+  vetrarstarfið okkar, og meðlimir geta skráð sig inn fyrir kennsluefni.
+body_en: Velcome to the youthcircus webpage
 layout: home
 date: '2019-01-24 12:00am'
