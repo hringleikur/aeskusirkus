@@ -1,6 +1,9 @@
-title_is: Um Aeskusirkusinn
-title_en: About Aeskusirkus
-body_is: Stuff about it. you know.
+title_is: Um Æskusirkusinn
+title_en: About Æskusirkus
+body_is: >-
+  Æskusirkusinn hefur síðustu ár verið með öflugt sirkusstarf fyrir ungmenni,
+  bæði stutt sumarnámskeið og vetrarstarf þar sem krakkarnir læra ítarlegra um
+  sirkusfærnina sem þau velja sér
 layout: about
-type: about
 date: '2019-01-24 12:00am'
+type: about
