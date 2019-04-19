@@ -2,15 +2,40 @@ title_is: Hafa samband
 title_en: Contact
 image: >-
   https://res.cloudinary.com/hringleikur/image/upload/v1547287099/Tour%202018%20Promo/29.jun-36.jpg
-body_is: |-
-  Directions to armann
-
-  Directions to Primal
-
-  Etc.
-
-  Mailing list link
-layout: contact
 show_form: true
-type: contact
+body_is: >-
+  [Smelltu hér til að sjá kort að Ármannsheimilinu Engjavegi 7 þar sem flest
+  starfsemi fer
+  fram](https://ja.is/kort/?d=hashid%3A61bkR&x=359993&y=407542&z=8&type=map) \
+
+  Sumarnámskeið, sunnudagstímar, opnar æfingar og stakar vinnustofur
+
+
+  [Smelltu hér til að sjá kort að Primal Faxafen 12 þar sem við sum starfsemin
+  fer
+  fram](https://www.google.com/maps/place/Primal+Iceland/@64.1285618,-21.8658062,19.17z/data=!4m5!3m4!1s0x0:0xa896bdc5497f78e0!8m2!3d64.1286897!4d-21.8654662)\
+
+  Miðvikudagstímar og stakar vinnustofur
+
+
+  [Smelltu hér til að ská þig á póstlistann
+  okkar](https://mailchi.mp/5abf2c21d518/aeskusirkus)
+body_en: >-
+  [Click here to see a map where Ármann gymnasium Engjavegur 7 is where we have
+  most of our
+  activities](https://ja.is/kort/?d=hashid%3A61bkR&x=359993&y=407542&z=8&type=map)\
+
+  Summerclasses, sundayclasses, open classes and workshops
+
+
+  [Click here to see where Primal Faxafen 12 is where we also have some
+  activities](https://www.google.com/maps/place/Primal+Iceland/@64.1285618,-21.8658062,19.17z/data=!4m5!3m4!1s0x0:0xa896bdc5497f78e0!8m2!3d64.1286897!4d-21.8654662)\
+
+  Wednesday evening classes and workshops
+
+
+  [Click here to sign up for our mailing
+  list](https://mailchi.mp/5abf2c21d518/aeskusirkus)
+layout: contact
 date: '2019-01-24 12:00am'
+type: contact
