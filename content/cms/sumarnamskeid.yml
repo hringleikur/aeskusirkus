@@ -101,7 +101,19 @@ body_is: >-
   \    <td>20.000kr</td>
 
 
-  \    <td>4 dagar</td>
+  \    <td>4 dagar, örfá pláss eftir</td>
+
+    </tr>
+
+    <tr>
+
+  \    <td>25.-28.júní</td>
+
+
+  \    <td>20.000kr</td>
+
+
+  \    <td>4 dagar, aukanámskeið</td>
 
     </tr>
 
@@ -113,7 +125,7 @@ body_is: >-
   \    <td>25.000kr</td>
 
 
-  \    <td></td>
+  \    <td>Fá pláss eftir</td>
 
     </tr>
 
@@ -125,7 +137,7 @@ body_is: >-
   \    <td>25.000kr</td>
 
 
-  \    <td></td>
+  \    <td>Fá pláss eftir</td>
 
     </tr>
 
@@ -161,7 +173,7 @@ body_is: >-
   \    <td>25.000kr</td>
 
 
-  \    <td></td>
+  \    <td>Fá pláss eftir</td>
 
     </tr>
 
